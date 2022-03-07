@@ -5,11 +5,14 @@
       :key="project._id"
       class="project-preview-container"
     >
-      <project-preview :project="project" />
+      <project-preview
+        class="project-preview"
+        @click="showDetails(project._id)"
+        :project="project"
+      />
       <div class="btns-container">
-        <button @click="remove(project._id)">X</button>
-        <!-- <router-link :to="'/project/'+project._id">Details</router-link>
-                <router-link :to="'/project/edit/'+project._id">Edit</router-link> -->
+        <button @click="removeProject(project._id)">X</button>
+        <button @click="editProject(project._id)">Edit</button>
       </div>
     </div>
   </section>
@@ -27,7 +30,17 @@
       return {};
     },
     created() {},
-    methods: {},
+    methods: {
+      removeProject(projId) {
+        this.$emit('removed', projId);
+      },
+      editProject(projectId) {
+        this.$router.push(`/edit/${projectId}`);
+      },
+      showDetails(projectId) {
+        this.$router.push(`/details/${projectId}`);
+      },
+    },
     computed: {},
     unmounted() {},
   };
