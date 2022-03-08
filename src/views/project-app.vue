@@ -3,6 +3,7 @@
     <h1>Welcome to ProTeam</h1>
     <h2>Build your dream team now</h2>
     <button @click="addProject">Add Project</button>
+    <button @click="toForm">to google Form</button>
   </main>
   <section class="container-center">
     <project-list
@@ -41,6 +42,9 @@
       },
       addProject() {
         this.$router.push('/edit');
+      },
+      toForm() {
+        this.$router.push('/sheet');
       },
       removeProject(projectId) {
         projectService.remove(projectId).then((projs) => {
