@@ -1,18 +1,18 @@
 <template>
-  <section class="project-list">
-    <div
-      v-for="project in projects"
-      :key="project._id"
-      class="project-preview-container"
-    >
+  <section class="project-list warpper">
+    <div v-for="project in projects" :key="project._id">
       <project-preview
         class="project-preview"
         @click="showDetails(project._id)"
         :project="project"
       />
       <div class="btns-container">
-        <button @click="removeProject(project._id)">X</button>
-        <button @click="editProject(project._id)">Edit</button>
+        <button @click="removeProject(project._id)" class="btn btn-black">
+          X
+        </button>
+        <button @click="editProject(project._id)" class="btn btn-black">
+          Edit
+        </button>
       </div>
     </div>
   </section>

@@ -2,8 +2,8 @@
   <main class="main-content">
     <h1>Welcome to ProTeam</h1>
     <h2>Build your dream team now</h2>
-    <button @click="addProject">Add Project</button>
-    <button @click="toForm">to google Form</button>
+    <button @click="addProject" class="btn btn-black">Add Project</button>
+    <button @click="toForm" class="btn btn-black">To Google Form</button>
   </main>
   <section class="container-center">
     <project-list
