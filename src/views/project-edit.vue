@@ -1,10 +1,21 @@
 <template>
-  <section>
-    <h2>{{ formTitle }}</h2>
+  <section class="center form-center">
+    <h1>{{ formTitle }}</h1>
     <form @submit.prevent="save">
-      <input type="text" v-model="projectToEdit.name" placeholder="title" />
-      <input type="number" v-model="projectToEdit.price" placeholder="price" />
-      <button>Save</button>
+      <div class="inputbox">
+        <input type="text" v-model="projectToEdit.name" placeholder="title" />
+      </div>
+      <div class="inputbox">
+        <input
+          class=""
+          type="number"
+          v-model="projectToEdit.price"
+          placeholder="price"
+        />
+      </div>
+      <div class="inputbox">
+        <button class="btn btn-black">Save</button>
+      </div>
     </form>
   </section>
 </template>

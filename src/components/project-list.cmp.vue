@@ -1,8 +1,8 @@
 <template>
-  <section class="project-list warpper">
+  <section class="resp-grid align-center">
     <div v-for="project in projects" :key="project._id">
       <project-preview
-        class="project-preview"
+        class="project-preview card"
         @click="showDetails(project._id)"
         :project="project"
       />

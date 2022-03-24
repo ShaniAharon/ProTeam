@@ -1,5 +1,5 @@
 <template>
-  <section class="project-list">
+  <section class="align-center">
     <h2>{{ project.name }}</h2>
     <h3>{{ project.price }}</h3>
   </section>

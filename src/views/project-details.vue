@@ -1,11 +1,36 @@
 <template>
-  <h1>Project Details</h1>
-  <section v-if="project">
+  <h1 class="align-center">Project Details</h1>
+  <div v-if="project" class="wrapper">
+    <div class="product-img">
+      <img src="http://bit.ly/2tMBBTd" height="420" width="327" />
+    </div>
+    <div class="product-info">
+      <div class="product-text">
+        <h1>{{ project.name }}</h1>
+        <h2>by studio and friends</h2>
+        <p>
+          Harvest Vases are a reinterpretation<br />
+          of peeled fruits and vegetables as<br />
+          functional objects. The surfaces<br />
+          appear to be sliced and pulled aside,<br />
+          allowing room for growth.
+        </p>
+      </div>
+      <div class="product-price-btn">
+        <p>
+          <span>{{ project.price }}</span
+          >$
+        </p>
+        <button type="button">join now</button>
+      </div>
+    </div>
+  </div>
+  <!-- <section v-if="project">
     <h3>See the project details here:</h3>
     <h2>{{ project._id }}</h2>
     <h2>{{ project.name }}</h2>
     <h2>{{ project.price }}</h2>
-  </section>
+  </section> -->
 </template>
 
 <script>
