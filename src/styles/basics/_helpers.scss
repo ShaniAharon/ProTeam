@@ -61,3 +61,31 @@
   background-color: #555555;
   color: white;
 }
+
+//inputs
+.input-big[type='text'] {
+  width: 250px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  border-radius: 10px;
+}
+
+.input-big[type='text']:focus {
+  border: 3px solid #555;
+}
+
+//width
+.w-50prec {
+  width: 50%;
+}
+
+//form
+// .form-width {
+//   margin: auto;
+//   max-width: 55%;
+// }
